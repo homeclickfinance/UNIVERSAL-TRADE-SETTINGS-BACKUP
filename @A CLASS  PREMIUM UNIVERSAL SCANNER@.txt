@@ -1,0 +1,369 @@
+TIMEFRAME ( 1 minute )
+Relativestrenght1 = RSI[14](close)
+Rsione = (Relativestrenght1 > 60.00 AND Relativestrenght1 < 95.00 )
+Volume1=(Volume>10000.00)
+REM Calculate a simple moving average over the last 50 days
+ma7 = AVERAGE[10]
+ma30 = AVERAGE[200]
+calbar=summation[2](close>open)=2
+MomentumMA = MOMENTUM(ma30-ma7) * 100 / CLOSE
+
+//============================================================
+
+MyMACDupone = MACD[12,26,9](Close)
+macdoneupone = MyMACDupone > 0 AND MyMACDupone > MyMACDupone[1]
+//============================================================
+//============================================================
+cosgegutivecandupone = (close > open AND close[1] > open[1] AND close[2] > open[2] AND close[3] > open[3] )
+//============================================================
+//============================================================
+
+
+
+Vpenny1min=(Volume>10000.00)
+//============================================================
+Relativestrenght1d = RSI[14](close)
+Rsionedown = (Relativestrenght1d > 5.00 AND Relativestrenght1d < 40.00 )
+
+REM Calculate a simple moving average over the last 50 days
+mad7 = AVERAGE[10]
+mad30 = AVERAGE[200]
+calbardown=summation[2](close<open)=2
+MomentumMAdown = MOMENTUM(mad7-mad30) * 100 / CLOSE
+
+//============================================================
+MyMACDdownone = MACD[12,26,9](Close)
+macdonedownone = MyMACDdownone < 0 AND MyMACDdownone < MyMACDdownone[1]
+//============================================================
+//============================================================
+
+//============================================================
+cosgegutivecandownone = (close < open AND close[1] < open[1] AND close[2] < open[2] AND close[3] < open[3] )
+//============================================================
+
+//============================================================
+
+
+TIMEFRAME ( 1 minute )
+
+indicator81 = RSI[14](close)
+Filt = (indicator81 > 90.00)
+Dailycup=(close>open)
+cosgegutivecand = summation[2](close>open)=2
+
+//==
+
+V=(Volume>300.00)
+
+
+//============================================================ THIS
+//============================================================
+
+indicator80 = RSI[14](close)
+Filt1 =(indicator80 < 10.00 )
+cosgegutiveonedowne = summation[2](close<open)=2
+dailydoun=(close<open)
+V=(Volume>300.00)
+
+//==
+
+Volonce=(Volume>10000.00)
+
+
+TIMEFRAME ( 5 minute )
+Relativestrenght5 = RSI[14](close)
+Rsifive = (Relativestrenght5 > 65.00 AND Relativestrenght5 < 95.00 )
+Volume5=(Volume>50000.00)
+
+REM Calculate a simple moving average over the last 50 days
+ma7 = AVERAGE[10]
+ma30 = AVERAGE[200]
+calbar=summation[2](close>open)=2
+MomentumMA = MOMENTUM(ma30-ma7) * 100 / CLOSE
+
+//============================================================
+
+MyMACDup = MACD[12,26,9](Close)
+macdoneup = MyMACDup > 0 AND MyMACDup > MyMACDup[1]
+//============================================================
+//============================================================
+
+cosgegutivecandup = (close > open AND close[1] > open[1] AND close[2] > open[2] )
+
+//============================================================
+changeinfiveminuteup =(close - close[1])
+// Condition: Variation is less than -100
+Upfiftycent = changeinfiveminuteup > 0.5000
+
+//============================================================
+
+//============================================================
+changeinfiveminutedown =(close - close[1])
+// Condition: Variation is less than -100
+downfiftycent = changeinfiveminutedown < -0.1000
+
+//============================================================
+
+Onelove = RSI[14](close)
+Lovemoney = (Onelove > 65.00 AND Onelove < 95.00 )
+
+PuntoMaximo1 = low - high[1]
+//CM=summation[2](close>open)=2
+Vpenny=(Volume>50000.00)
+//============================================================
+Relativestrenght5d = RSI[14](close)
+Rsifivedown = (Relativestrenght5d > 5.00 AND Relativestrenght5d < 45.00  )
+
+//============================================================
+MyMACDdown = MACD[12,26,9](Close)
+macdonedown = MyMACDdown < 0 AND MyMACDdown < MyMACDdown[1]
+//============================================================
+
+//============================================================
+cosgegutivecandown = (close < open AND close[1] < open[1] AND close[2] < open[2]  )
+//============================================================
+
+REM Calculate a simple moving average over the last 50 days
+mad7 = AVERAGE[10]
+mad30 = AVERAGE[200]
+calbardown=summation[2](close<open)=2
+MomentumMAdown = MOMENTUM(mad7-mad30) * 100 / CLOSE
+
+TIMEFRAME ( 5 minute )
+
+Bndicator1 = RSI[14](close)
+
+Bilter3 = (Bndicator1 > 60.00  )
+Dailycup5=(close>open)
+//==
+indicator1 = RSI[14](close)
+Filter1 = (indicator1 > 90.00   )
+CL=summation[2](close>open)=2
+V=(Volume>300.00)
+
+//============================================================ THIS
+//============================================================
+Bndicator2 = RSI[14](close)
+
+Bilter4 =(Bndicator2 < 40.00 )
+dailydound5=(close<open)
+
+//==
+indicator2 = RSI[14](close)
+Filter2 =(indicator2 < 10.00  )
+V=(Volume>300.00)
+CL1=summation[2](close<open)=2
+
+
+TIMEFRAME ( 30 minute )
+
+Come = RSI[14](close)
+Money = (Come > 55.00 AND come < 98.00  )
+Continuebar30=(close > open   )
+
+//=====================================================
+Volume430=(Volume>200000.00)
+Volume30=(Volume>100000.00)
+
+//======================================================
+Comee = RSI[14](close)
+Moneye = (Comee > 55.00 AND comee < 98.00  )
+
+//======================================================
+
+ThirtyMinuteFilter = IntradayBarIndex
+MaximumTimeframe=(ThirtyMinuteFilter  > 0 AND ThirtyMinuteFilter <  13  )
+
+
+//======================================================
+
+MyMACDupone30 = MACD[12,26,9](Close)
+macdoneup30 = MyMACDupone30 > 0 AND MyMACDupone30 > MyMACDupone30[1]
+//======================================================
+//======================================================
+ma710 = AVERAGE[10]
+ma307 = AVERAGE[200]
+daythirty = MOMENTUM(ma307>ma710) * 100 / CLOSE
+//=====================================================
+
+Come30 = RSI[14](close)
+Money30 = (Come30 > 5.00 AND come < 45.00  )
+Continuebardown30=(close < open  )
+
+//=============================================================
+
+REM Calculate a simple moving average over the last 50 days
+mago10 = AVERAGE[10]
+mago200 = AVERAGE[200]
+Momentgodown = MOMENTUM(mago10<mago200) * 100 / CLOSE
+
+//=============================================================
+
+//============================================================
+MyMACDdown30 = MACD[12,26,9](Close)
+macdonedown30 = MyMACDdown30 < 0 AND MyMACDdown30 < MyMACDdown30[1]
+//============================================================
+
+//=============================================================
+TIMEFRAME ( 4 hour )
+indicator3 = RSI[14](close)
+Filter3 = (indicator3 > 75.00  )
+
+VH4=(Volume>300000.00)
+//CL2=(close<open)
+PuntoMaximo =(close>open)
+
+
+//==============================================================
+
+indicator4 = RSI[14](close)
+Filter4 =(indicator4 < 25.00  )
+
+VH4=(Volume>300000.00)
+
+PuntoMinimo =(close<open)
+
+
+
+//============================================================
+
+TIMEFRAME ( daily )
+
+Relativestrenght = RSI[14](close)
+Rsidaily = (Relativestrenght > 15.00  AND Relativestrenght < 85.00  )
+Volumedaliy=(Volume>2000000.00)
+Continuebar=summation[2](close>open)=2
+
+REM Calculate a simple moving average over the last 50 days
+madd7 = AVERAGE[10]
+madd30 = AVERAGE[38]
+MomentumMAdd = MOMENTUM(madd30-madd7) * 100 / CLOSE
+
+Bndicat1 = RSI[14](close)
+Bilt3 = (Bndicat1 > 95.00 )
+BL3=(close>open)
+VD5=(Volume>20000.00)
+
+//======================================================
+variationPord = (close - close[1]) / close[1] * 100
+// Condition: Variation is less than -100
+variationProconditiondd = variationPord > 40
+
+//======================================================
+
+//======================================================
+variationfour = (close - close[1]) / close[1] * 100
+// Condition: Variation is less than -100
+variationfourcondition = variationfour > 60
+
+//======================================================
+
+//======================================================
+
+Jndicator1 = RSI[14](close)
+
+Jilter3 = (Jndicator1 > 15.00 AND Jndicator1 < 85.00  )
+Shoot1=(Volume> 2000000.00)
+QuntoMax=summation[2](close>open)=2
+//QuntoMax = low - high[1] > 0.1000
+//GAP2candle=summation[2](close>open)=2
+//========================================================
+//======================================================
+
+MyStophigh = High[1]
+
+// Criteria: Proximity to the high of the previous day
+Criteriahigh = (Close / MyStophigh - 1) * 100
+
+// Condition 3: Price is less than previous day's high or no more than 5% above it.
+highprocentage = Criteriahigh > 0.10
+
+//======================================================
+
+//======================================================
+variationPor = (close - close[1]) / close[1] * 100
+// Condition: Variation is less than -100
+variationProcondition = variationPor > 10
+
+//======================================================
+Relatstrenghtdown = RSI[14](close)
+Rsidailydown = ( Relatstrenghtdown > 20.00 AND Relatstrenghtdown <  85.00 )
+Volumedaliy=(Volume>2000000.00)
+Continuebardown=summation[2](close<open)=2
+
+REM Calculate a simple moving average over the last 50 days
+mabb7 = AVERAGE[10]
+mabb30 = AVERAGE[38]
+MomentumMAdownbb = MOMENTUM(mabb7-mabb30) * 100 / CLOSE
+
+Bndicat2 = RSI[14](close)
+Bilt4 =(Bndicat2 < 5.00  )
+BL4=(close<open)
+VD5=(Volume>20000.00)
+
+//=============================================================
+
+variationdowd = (close - close[1]) / close[1] * 100
+// Condition: Variation is less than -100
+variationdowconditiond = variationdowd < -40
+
+//=============================================================
+
+//=============================================================
+
+variationdowfour = (close - close[1]) / close[1] * 100
+// Condition: Variation is less than -100
+variatdowndowcondition = variationdowfour < -60
+
+//=============================================================
+//============================================================
+MyStoplow = Low[1]
+// Sorting Criteria: Position of price with regard to stop level
+Criterialow = (Close / MyStoplow - 1) * 100
+// Condition 3: Price is greater than the stop level or less than 5% below it
+lowprocentage = Criterialow < -0.10
+
+//=============================================================
+
+//=============================================================
+
+variationdow = (close - close[1]) / close[1] * 100
+// Condition: Variation is less than -100
+variationdowcondition = variationdow < -10
+
+//=============================================================
+
+//=============================================================
+
+// Additional condition: Check if the price is over $1
+priceOverOne = close > 0.6000
+
+
+//=============================================================
+
+
+//============================================================
+MACDupdaily = MACD[12,26,9](Close)
+macddailyup = MACDupdaily > 0 AND MACDupdaily > MACDupdaily[1]
+
+//=============================================================
+
+//=============================================================
+MACDdowndaily = MACD[12,26,9](Close)
+macddailydown = MACDdowndaily < 0 AND MACDdowndaily < MACDdowndaily[1]
+//============================================================
+
+
+
+//((close-close[1])/close *100)
+
+//=============================================================
+
+
+//====================
+Scan= RSI [14](close)
+//====================
+SCREENER[ ((Filter3 AND Bilter3 AND Volonce AND VH4 AND cosgegutivecand AND PuntoMaximo AND Dailycup5 AND variationfourcondition AND priceOverOne AND cosgegutivecandup AND Continuebar30 AND Volume430 AND daythirty AND MomentumMA AND Shoot1 AND macddailyup )) OR (( Filter4 AND Bilter4 AND Volonce AND VH4 AND PuntoMinimo  AND dailydound5 AND variatdowndowcondition AND priceOverOne AND cosgegutivecandown AND cosgegutiveonedowne AND cosgegutivecandownone AND downfiftycent AND Continuebardown30 AND Volume430 AND Momentgodown AND Volumedaliy AND macddailydown)) OR  (( Rsidaily AND Volumedaliy AND Money AND Volume30 AND Continuebar AND Continuebar30 AND calbar AND MomentumMA AND Rsifive AND Rsione AND Volume5 AND Volume1 AND MomentumMAdd AND macdoneup AND highprocentage AND variationProcondition AND macdoneupone AND priceOverOne AND cosgegutivecandup AND cosgegutivecandupone AND Upfiftycent AND daythirty AND macdoneup30 AND macddailyup)) OR (( Rsidailydown AND Volumedaliy AND Continuebardown AND Rsionedown AND calbardown AND Rsifivedown AND MomentumMAdown AND Volume1 AND Volume5 AND Money30 AND Continuebardown30 AND Volume30 AND MomentumMAdownbb AND macdonedown AND lowprocentage AND variationdowcondition AND macdonedownone AND priceOverOne AND cosgegutivecandown AND cosgegutiveonedowne AND cosgegutivecandownone AND downfiftycent AND Momentgodown AND macdonedown30 AND macddailydown)) OR (( Filter1 AND Filt AND V AND VD5 AND Bilt3 AND CL AND BL3 AND Dailycup AND variationProconditiondd AND priceOverOne AND Upfiftycent)) OR (( Filter2 AND Filt1 AND V AND VD5 AND Bilt4 AND CL1 AND BL4 AND dailydoun AND variationdowconditiond AND priceOverOne AND downfiftycent )) OR (( Jilter3 AND Shoot1 AND PuntoMaximo1 AND Vpenny AND Vpenny1min AND QuntoMax AND Moneye AND Lovemoney AND Volume30 AND variationProcondition  AND MaximumTimeframe AND MomentumMAdd AND macdoneup30 AND Continuebar30 AND macddailyup AND priceOverOne AND cosgegutivecandup)) ] (Scan AS "RSI")
+//=============================================================
+//=============================================================
+//=============================================================
